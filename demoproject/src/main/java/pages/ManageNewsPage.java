@@ -33,9 +33,9 @@ public class ManageNewsPage
   {
 	 newoption.click();
   }
-  public void enterNewsInformation(String alertmsg)
+  public void enterNewsInformation(String news)
   {
-	 enternews.sendKeys(alertmsg);
+	 enternews.sendKeys(news);
   }
   public void saveNews()
   {
