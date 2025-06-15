@@ -8,6 +8,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
+import utilities.PageUtility;
+
 
 public class AdminUsersPage {
  
@@ -17,7 +19,6 @@ public class AdminUsersPage {
 	@FindBy(xpath="//input[@placeholder='Password']")WebElement pword;
 	@FindBy(xpath="//button[@type='submit']")WebElement signin;
 	@FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/list-admin']//parent::div/a")WebElement moreinfoadmin;
-	//          /html/body/div/div[1]/section/div/div/div[1]/div/a
 	@FindBy(xpath="//a[text()=' New']")WebElement newbtn;
 	@FindBy(xpath="//input[@id='username']")WebElement usernme;
 	@FindBy(xpath="//input[@id='password']")WebElement passwrd;
@@ -52,11 +53,14 @@ public class AdminUsersPage {
 	}
     
     public void selectUserType()
-	{
-    	Select sc=new Select(usrtype);
+	{ 
+    	PageUtility pageutility=new PageUtility();
+    	pageutility.selectByIndex(usrtype, 2);
+    	
+    	//Select sc=new Select(usrtype);
         //sc.selectByVisibleText("");
         //sc.selectByValue("");
-          sc.selectByIndex(2);
+        //  sc.selectByIndex(2);
 	}
     
     public void saveAdminUsers()

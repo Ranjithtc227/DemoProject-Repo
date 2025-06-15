@@ -3,16 +3,14 @@ package testScript;
 import java.io.IOException;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import pages.AdminUsersPage;
 import pages.LoginPage;
 import utilities.ExcelUtility;
 
-public class AdminUsersTest extends BaseTest{
+public class AdminUsersTest extends Base{
    
 	@Test
 	public void verifyTheUserIsAbleToCreateTheAdminUsers() throws IOException

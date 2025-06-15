@@ -40,7 +40,7 @@ public class Base {
     }
 	
 	
-	//@AfterMethod
+	@AfterMethod
 	public void driverQuit() {
 		//driver.close();
     	driver.quit();
