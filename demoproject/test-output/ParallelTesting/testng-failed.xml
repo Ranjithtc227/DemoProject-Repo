@@ -6,12 +6,14 @@
     <classes>
       <class name="testScript.ManageNewsTest">
         <methods>
+          <include name="driverQuit"/>
           <include name="verifyTheUserIsAbleToEnterTheNews"/>
           <include name="browserInitialisation"/>
         </methods>
       </class> <!-- testScript.ManageNewsTest -->
       <class name="testScript.LoginTest">
         <methods>
+          <include name="driverQuit"/>
           <include name="verifyTheUserIsAbleToLoginUsingInalidUsername_validPassword"/>
           <include name="browserInitialisation"/>
         </methods>

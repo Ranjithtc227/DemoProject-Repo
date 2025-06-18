@@ -3,6 +3,10 @@
 <suite name="ParallelTesting_Test" parallel="tests" thread-count="5">
  <parameter name="browser" value="chrome"></parameter>
   
+  <listeners>
+     <listener class-name="generateReport.Listeners">
+  </listener>
+</listeners>
   <test name="ChromeTest">
     <classes>
       <class name="testScript.ManageNewsTest"></class>

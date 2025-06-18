@@ -9,6 +9,7 @@ import org.testng.annotations.Test;
 import pages.AdminUsersPage;
 import pages.LoginPage;
 import utilities.ExcelUtility;
+import utilities.FakerUtility;
 
 public class AdminUsersTest extends Base{
    
@@ -18,22 +19,29 @@ public class AdminUsersTest extends Base{
 		        //String username="Ranjith";
 				//String password="Ranjith@321"; 
 				
-		        String username=ExcelUtility.getStringData(1, 0, "loginpage");
-		        String password=ExcelUtility.getStringData(1, 1, "loginpage");
+		       // String username=ExcelUtility.getStringData(1, 0, "loginpage");
+		       // String password=ExcelUtility.getStringData(1, 1, "loginpage");
 		        
-		        String user=ExcelUtility.getStringData(1, 0, "adminusers");
-				String pass=ExcelUtility.getStringData(1, 1, "adminusers");
+		        //String user=ExcelUtility.getStringData(1, 0, "adminusers");
+				//String pass=ExcelUtility.getStringData(1, 1, "adminusers");
 				
 				LoginPage loginpage=new LoginPage(driver);
-				loginpage.enterTheUserName(username);
-				loginpage.enterThePassword(password);
+				//loginpage.enterTheUserName(username);
+				//loginpage.enterThePassword(password);
 				loginpage.clickTheSignInButton();
 				
 				AdminUsersPage adminuserspage=new AdminUsersPage(driver);
+				//String adminusername="tester";
+				//String adminpassword="pass";
+				
+				FakerUtility fakerutility=new FakerUtility();
+				String adminusername=fakerutility.creatARandomFirstName();
+				String adminpassword=fakerutility.creatARandomFirstName();
+				
 				adminuserspage.clickMoreInformationAdmin();
 				adminuserspage.clickNewButton();
-				adminuserspage.enterUserName(user);
-				adminuserspage.enterPassword(pass);
+				adminuserspage.enterUserName(adminusername);
+				adminuserspage.enterPassword(adminpassword);
 				adminuserspage.selectUserType();
 				adminuserspage.saveAdminUsers();
 				boolean alertmsg=adminuserspage.displayAlertMessage();
