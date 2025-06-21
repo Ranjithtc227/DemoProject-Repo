@@ -79,3 +79,31 @@ public class LoginTest extends Base {
 		
 	 }
 }
+
+/*
+ Notes:-
+ 
+ Assertion:-  
+   Is a TestNG feature, 
+   Used for Validation(compare between actual and expected results)
+   Commonly used for verifying application behavior,
+                     validating UI elements,Page Title,Url,message
+   It doesn't continue when it fails once and through a Assertion error(That means Expected conditions doesn't meet)
+   
+   2 Types
+      1. Hard Assertion ----> It doesn't continue(stops) execution when Assertion Fails, It through an Exception
+                              There is no need to create an object, just apply-->classname.methodname
+                              There is no need to call a method AsserAll()
+                              
+      2. Soft Assertion ----> It completes execution when Assertion Fails
+                              Need to create an object for a SoftAssert class,Methods of softAssert class are assertEquals,assertTrue,assertFalse etc 
+                              
+                              At the end, call a method AsserAll()
+     For eg:-
+             String actualTitle=driver.getTitle();
+             String expectedTitle="obsqurazone";
+             Assert.assertEquals(actualTitle,expectedTitle,"Title does not match");
+                                 
+ */
+
+

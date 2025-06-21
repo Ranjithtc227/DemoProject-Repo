@@ -13,7 +13,7 @@ import utilities.FakerUtility;
 
 public class AdminUsersTest extends Base{
    
-	@Test
+	@Test(retryAnalyzer=retry.Retry.class)
 	public void verifyTheUserIsAbleToCreateTheAdminUsers() throws IOException
 	{
 		        //String username="Ranjith";
@@ -22,8 +22,8 @@ public class AdminUsersTest extends Base{
 		        String username=ExcelUtility.getStringData(1, 0, "loginpage");
 		        String password=ExcelUtility.getStringData(1, 1, "loginpage");
 		        
-		        //String user=ExcelUtility.getStringData(1, 0, "adminusers");
-				//String pass=ExcelUtility.getStringData(1, 1, "adminusers");
+		        String user=ExcelUtility.getStringData(1, 0, "adminusers");
+				String pass=ExcelUtility.getStringData(1, 1, "adminusers");
 				
 				LoginPage loginpage=new LoginPage(driver);
 				loginpage.enterTheUserName(username);
@@ -31,8 +31,6 @@ public class AdminUsersTest extends Base{
 				loginpage.clickTheSignInButton();
 				
 				AdminUsersPage adminuserspage=new AdminUsersPage(driver);
-				//String adminusername="tester";
-				//String adminpassword="pass";
 				
 				FakerUtility fakerutility=new FakerUtility();
 				String adminusername=fakerutility.creatARandomFirstName();
