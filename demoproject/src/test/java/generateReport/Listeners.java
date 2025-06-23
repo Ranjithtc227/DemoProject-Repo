@@ -93,7 +93,7 @@ public class Listeners implements ITestListener
  	{ 
   
  		ITestListener.super.onFinish(context); 
- 		extent.flush(); 
+ 		extent.flush();    //for generate report flush method called here
  	}
 	
 }

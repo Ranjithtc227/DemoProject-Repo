@@ -57,9 +57,12 @@ public class Base {
 		{
 			throw new Exception("INVALID");
 		}
-    	//driver.get("https://groceryapp.uniqassosiates.com/admin");
+    	
+		//driver.get("https://groceryapp.uniqassosiates.com/admin");
+		
 		driver.get(properties.getProperty("url"));
-    	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(WaitUtility.IMPLICIT_WAIT));
+    	
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(WaitUtility.IMPLICIT_WAIT));
     	driver.manage().window().maximize();
     	
     }

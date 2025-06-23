@@ -12,20 +12,20 @@
     <classes>
       <class name="testScript.ManageNewsTest"></class>
     </classes>
-  </test>           <!-- Test -->
+  </test>           <!-- Test On Chrome-->
   
   <test name="EdgeTest">
   <parameter name="browser" value="edge"></parameter>
     <classes>
       <class name="testScript.ManageNewsTest"></class>
     </classes>
-  </test> 
+  </test>            <!-- Test On Edge-->
   
   <test name="FirefoxTest">
   <parameter name="browser" value="firefox"></parameter>
     <classes>
       <class name="testScript.ManageNewsTest"></class>
     </classes>
-  </test>
+  </test>            <!-- Test On Firefox-->
   
 </suite>           <!-- Suite -->

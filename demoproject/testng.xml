@@ -10,13 +10,11 @@
  <parameter name="browser" value="chrome"></parameter>
 
  <test thread-count="5" name="Test">
- 
- 
-    <classes>
+ <classes>
       <class name="testScript.ManageNewsTest"></class>
       <class name="testScript.AdminUsersTest">
-     </class>
-    </classes>
-  </test> <!-- Test -->
+      </class>
+ </classes>
+ </test>                <!-- Test -->
   
-</suite> <!-- Suite -->
+</suite>                <!-- Suite -->

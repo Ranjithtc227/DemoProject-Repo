@@ -7,17 +7,18 @@
      <listener class-name="generateReport.Listeners">
   </listener>
 </listeners>
+
   <test name="ChromeTest">
     <classes>
       <class name="testScript.ManageNewsTest"></class>
     </classes>
-  </test>           <!-- Test -->
+  </test>           <!-- Test On Chrome-->
   
   <test name="EdgeTest">
     <classes>
       <class name="testScript.AdminUsersTest"></class>
     </classes>
-  </test> 
+  </test>           <!-- Test On Edge-->
   
  
   
